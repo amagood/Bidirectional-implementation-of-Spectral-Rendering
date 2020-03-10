@@ -1,0 +1,3 @@
+N:/clion projects/TheNextWeek/cmake-build-debug/CMakeFiles/TheNextWeekend.dir
+N:/clion projects/TheNextWeek/cmake-build-debug/CMakeFiles/edit_cache.dir
+N:/clion projects/TheNextWeek/cmake-build-debug/CMakeFiles/rebuild_cache.dir
