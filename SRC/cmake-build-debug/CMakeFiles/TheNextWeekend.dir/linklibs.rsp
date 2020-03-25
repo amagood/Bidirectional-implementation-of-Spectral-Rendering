@@ -1,1 +1,1 @@
- -L"N:/clion projects/TheNextWeek/freeglut/lib/x64" -Wl,-Bstatic -lopengl32 -lfreeglut -Wl,-Bdynamic -lglu32 -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
+ -L"N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/freeglut/lib/x64" -Wl,-Bstatic -lopengl32 -lfreeglut -Wl,-Bdynamic -lglu32 -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

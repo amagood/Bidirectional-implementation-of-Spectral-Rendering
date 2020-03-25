@@ -19,6 +19,7 @@
 #include "moving_sphere.h"
 #include "random.h"
 #include "sphere.h"
+#include "triangle.h"  //add by amagood 20200325
 #define STB_IMAGE_IMPLEMENTATION
 #include "stb_image.h"
 #include "surface_texture.h"
@@ -168,6 +169,10 @@ hittable *cornell_balls() {
     list[i++] = boundary;
     list[i++] = new constant_medium(boundary, 0.1, new constant_texture(vec3(1.0, 1.0, 1.0)));
     list[i++] = new translate(new rotate_y(new box(vec3(0, 0, 0), vec3(165, 330, 165), white),  15), vec3(265,0,295));
+
+    //addTest by amagood 20200325
+    //FIXME CRASH
+    list[i++] = new Triangle({vec3(0,0,0),vec3(0,2,0),vec3(1,4,3)}, new dielectric(1.5));
     return new hittable_list(list,i);
 }
 
@@ -206,6 +211,9 @@ hittable *cornell_box() {
     list[i++] = new flip_normals(new xy_rect(0, 555, 0, 555, 555, white));
     list[i++] = new translate(new rotate_y(new box(vec3(0, 0, 0), vec3(165, 165, 165), white), -18), vec3(130,0,65));
     list[i++] = new translate(new rotate_y(new box(vec3(0, 0, 0), vec3(165, 330, 165), white),  15), vec3(265,0,295));
+
+
+
     return new hittable_list(list,i);
 }
 
@@ -276,8 +284,8 @@ int run() {
     //hittable *world = two_perlin_spheres();
     //hittable *world = earth();
     //hittable *world = simple_light();
-    hittable *world = cornell_box();
-    //hittable *world = cornell_balls();
+    //hittable *world = cornell_box();
+    hittable *world = cornell_balls();
     //hittable *world = cornell_smoke();
     //hittable *world = cornell_final();
     //hittable *world = final();

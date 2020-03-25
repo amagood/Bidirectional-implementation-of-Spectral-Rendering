@@ -5,23 +5,24 @@ CMakeFiles/TheNextWeekend.dir/main.cpp.obj
  ../freeglut/include/GL/freeglut.h
  ../freeglut/include/GL/freeglut_ext.h
  ../freeglut/include/GL/freeglut_std.h
- N:/clion projects/TheNextWeek/aabb.h
- N:/clion projects/TheNextWeek/aarect.h
- N:/clion projects/TheNextWeek/box.h
- N:/clion projects/TheNextWeek/bvh.h
- N:/clion projects/TheNextWeek/camera.h
- N:/clion projects/TheNextWeek/constant_medium.h
- N:/clion projects/TheNextWeek/hittable.h
- N:/clion projects/TheNextWeek/hittable_list.h
- N:/clion projects/TheNextWeek/main.cpp
- N:/clion projects/TheNextWeek/material.h
- N:/clion projects/TheNextWeek/moving_sphere.h
- N:/clion projects/TheNextWeek/perlin.h
- N:/clion projects/TheNextWeek/random.h
- N:/clion projects/TheNextWeek/ray.h
- N:/clion projects/TheNextWeek/sphere.h
- N:/clion projects/TheNextWeek/stb_image.h
- N:/clion projects/TheNextWeek/surface_texture.h
- N:/clion projects/TheNextWeek/svpng.h
- N:/clion projects/TheNextWeek/texture.h
- N:/clion projects/TheNextWeek/vec3.h
+ N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/aabb.h
+ N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/aarect.h
+ N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/box.h
+ N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/bvh.h
+ N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/camera.h
+ N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/constant_medium.h
+ N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/hittable.h
+ N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/hittable_list.h
+ N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/main.cpp
+ N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/material.h
+ N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/moving_sphere.h
+ N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/perlin.h
+ N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/random.h
+ N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/ray.h
+ N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/sphere.h
+ N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/stb_image.h
+ N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/surface_texture.h
+ N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/svpng.h
+ N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/texture.h
+ N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/triangle.h
+ N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/vec3.h

@@ -1,8 +1,8 @@
-# Install script for directory: N:/clion projects/TheNextWeek
+# Install script for directory: N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/Project")
+  set(CMAKE_INSTALL_PREFIX "C:/Program Files (x86)/TheNextWeekend")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "N:/clion projects/TheNextWeek/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -23,5 +23,6 @@ CMakeFiles/TheNextWeekend.dir/main.cpp.obj: ../stb_image.h
 CMakeFiles/TheNextWeekend.dir/main.cpp.obj: ../surface_texture.h
 CMakeFiles/TheNextWeekend.dir/main.cpp.obj: ../svpng.h
 CMakeFiles/TheNextWeekend.dir/main.cpp.obj: ../texture.h
+CMakeFiles/TheNextWeekend.dir/main.cpp.obj: ../triangle.h
 CMakeFiles/TheNextWeekend.dir/main.cpp.obj: ../vec3.h
 
