@@ -172,7 +172,7 @@ hittable *cornell_balls() {
 
     //addTest by amagood 20200325
     //FIXME CRASH
-    list[i++] = new Triangle({vec3(0,0,0),vec3(0,2,0),vec3(1,4,3)}, new dielectric(1.5));
+    list[i++] = new Triangle({vec3(0,0,0),vec3(0,2,0),vec3(1,4,3)}, new lambertian( new constant_texture(vec3(0.65, 0.05, 0.05)) ));
     return new hittable_list(list,i);
 }
 
