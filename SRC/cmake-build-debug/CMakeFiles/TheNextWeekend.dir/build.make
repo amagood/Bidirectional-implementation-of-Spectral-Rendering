@@ -33,19 +33,19 @@ cmake_force:
 SHELL = cmd.exe
 
 # The CMake executable.
-CMAKE_COMMAND = E:\desktop\CLion-2019.1.3.win\bin\cmake\win\bin\cmake.exe
+CMAKE_COMMAND = "C:\Program Files\JetBrains\CLion 2019.3.5\bin\cmake\win\bin\cmake.exe"
 
 # The command to remove a file.
-RM = E:\desktop\CLion-2019.1.3.win\bin\cmake\win\bin\cmake.exe -E remove -f
+RM = "C:\Program Files\JetBrains\CLion 2019.3.5\bin\cmake\win\bin\cmake.exe" -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "N:\clion projects\Bidirectional-implementation-of-Spectral-Rendering\Bidirectional-implementation-of-Spectral-Rendering\SRC"
+CMAKE_SOURCE_DIR = "C:\Users\DELEE\Desktop\Grapic Project\Bidirectional-implementation-of-Spectral-Rendering-dev-amagood\SRC"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "N:\clion projects\Bidirectional-implementation-of-Spectral-Rendering\Bidirectional-implementation-of-Spectral-Rendering\SRC\cmake-build-debug"
+CMAKE_BINARY_DIR = "C:\Users\DELEE\Desktop\Grapic Project\Bidirectional-implementation-of-Spectral-Rendering-dev-amagood\SRC\cmake-build-debug"
 
 # Include any dependencies generated for this target.
 include CMakeFiles/TheNextWeekend.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/TheNextWeekend.dir/flags.make
 CMakeFiles/TheNextWeekend.dir/main.cpp.obj: CMakeFiles/TheNextWeekend.dir/flags.make
 CMakeFiles/TheNextWeekend.dir/main.cpp.obj: CMakeFiles/TheNextWeekend.dir/includes_CXX.rsp
 CMakeFiles/TheNextWeekend.dir/main.cpp.obj: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="N:\clion projects\Bidirectional-implementation-of-Spectral-Rendering\Bidirectional-implementation-of-Spectral-Rendering\SRC\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TheNextWeekend.dir/main.cpp.obj"
-	C:\PROGRA~1\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TheNextWeekend.dir\main.cpp.obj -c "N:\clion projects\Bidirectional-implementation-of-Spectral-Rendering\Bidirectional-implementation-of-Spectral-Rendering\SRC\main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="C:\Users\DELEE\Desktop\Grapic Project\Bidirectional-implementation-of-Spectral-Rendering-dev-amagood\SRC\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/TheNextWeekend.dir/main.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\TheNextWeekend.dir\main.cpp.obj -c "C:\Users\DELEE\Desktop\Grapic Project\Bidirectional-implementation-of-Spectral-Rendering-dev-amagood\SRC\main.cpp"
 
 CMakeFiles/TheNextWeekend.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TheNextWeekend.dir/main.cpp.i"
-	C:\PROGRA~1\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "N:\clion projects\Bidirectional-implementation-of-Spectral-Rendering\Bidirectional-implementation-of-Spectral-Rendering\SRC\main.cpp" > CMakeFiles\TheNextWeekend.dir\main.cpp.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:\Users\DELEE\Desktop\Grapic Project\Bidirectional-implementation-of-Spectral-Rendering-dev-amagood\SRC\main.cpp" > CMakeFiles\TheNextWeekend.dir\main.cpp.i
 
 CMakeFiles/TheNextWeekend.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TheNextWeekend.dir/main.cpp.s"
-	C:\PROGRA~1\mingw-w64\x86_64-8.1.0-posix-seh-rt_v6-rev0\mingw64\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "N:\clion projects\Bidirectional-implementation-of-Spectral-Rendering\Bidirectional-implementation-of-Spectral-Rendering\SRC\main.cpp" -o CMakeFiles\TheNextWeekend.dir\main.cpp.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:\Users\DELEE\Desktop\Grapic Project\Bidirectional-implementation-of-Spectral-Rendering-dev-amagood\SRC\main.cpp" -o CMakeFiles\TheNextWeekend.dir\main.cpp.s
 
 # Object files for target TheNextWeekend
 TheNextWeekend_OBJECTS = \
@@ -82,7 +82,7 @@ bin/TheNextWeekend.exe: CMakeFiles/TheNextWeekend.dir/build.make
 bin/TheNextWeekend.exe: CMakeFiles/TheNextWeekend.dir/linklibs.rsp
 bin/TheNextWeekend.exe: CMakeFiles/TheNextWeekend.dir/objects1.rsp
 bin/TheNextWeekend.exe: CMakeFiles/TheNextWeekend.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="N:\clion projects\Bidirectional-implementation-of-Spectral-Rendering\Bidirectional-implementation-of-Spectral-Rendering\SRC\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable bin\TheNextWeekend.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="C:\Users\DELEE\Desktop\Grapic Project\Bidirectional-implementation-of-Spectral-Rendering-dev-amagood\SRC\cmake-build-debug\CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable bin\TheNextWeekend.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\TheNextWeekend.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -95,6 +95,6 @@ CMakeFiles/TheNextWeekend.dir/clean:
 .PHONY : CMakeFiles/TheNextWeekend.dir/clean
 
 CMakeFiles/TheNextWeekend.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "N:\clion projects\Bidirectional-implementation-of-Spectral-Rendering\Bidirectional-implementation-of-Spectral-Rendering\SRC" "N:\clion projects\Bidirectional-implementation-of-Spectral-Rendering\Bidirectional-implementation-of-Spectral-Rendering\SRC" "N:\clion projects\Bidirectional-implementation-of-Spectral-Rendering\Bidirectional-implementation-of-Spectral-Rendering\SRC\cmake-build-debug" "N:\clion projects\Bidirectional-implementation-of-Spectral-Rendering\Bidirectional-implementation-of-Spectral-Rendering\SRC\cmake-build-debug" "N:\clion projects\Bidirectional-implementation-of-Spectral-Rendering\Bidirectional-implementation-of-Spectral-Rendering\SRC\cmake-build-debug\CMakeFiles\TheNextWeekend.dir\DependInfo.cmake" --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" "C:\Users\DELEE\Desktop\Grapic Project\Bidirectional-implementation-of-Spectral-Rendering-dev-amagood\SRC" "C:\Users\DELEE\Desktop\Grapic Project\Bidirectional-implementation-of-Spectral-Rendering-dev-amagood\SRC" "C:\Users\DELEE\Desktop\Grapic Project\Bidirectional-implementation-of-Spectral-Rendering-dev-amagood\SRC\cmake-build-debug" "C:\Users\DELEE\Desktop\Grapic Project\Bidirectional-implementation-of-Spectral-Rendering-dev-amagood\SRC\cmake-build-debug" "C:\Users\DELEE\Desktop\Grapic Project\Bidirectional-implementation-of-Spectral-Rendering-dev-amagood\SRC\cmake-build-debug\CMakeFiles\TheNextWeekend.dir\DependInfo.cmake" --color=$(COLOR)
 .PHONY : CMakeFiles/TheNextWeekend.dir/depend
 

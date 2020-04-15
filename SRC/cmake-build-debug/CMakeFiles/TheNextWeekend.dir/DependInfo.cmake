@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/main.cpp" "N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/cmake-build-debug/CMakeFiles/TheNextWeekend.dir/main.cpp.obj"
+  "C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/main.cpp" "C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/cmake-build-debug/CMakeFiles/TheNextWeekend.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

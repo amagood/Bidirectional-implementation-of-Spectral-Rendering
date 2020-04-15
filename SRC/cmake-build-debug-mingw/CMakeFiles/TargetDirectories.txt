@@ -1,0 +1,3 @@
+N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/cmake-build-debug-mingw/CMakeFiles/TheNextWeekend.dir
+N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/cmake-build-debug-mingw/CMakeFiles/edit_cache.dir
+N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/cmake-build-debug-mingw/CMakeFiles/rebuild_cache.dir

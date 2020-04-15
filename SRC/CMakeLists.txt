@@ -4,7 +4,6 @@ project(TheNextWeekend)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -Wl,--stack,100000000")
 
-
 include_directories(freeglut/include)  #for opengl freeglut
 link_directories(freeglut/lib/x64) #for opengl freeglut
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY bin) #for opengl freeglut

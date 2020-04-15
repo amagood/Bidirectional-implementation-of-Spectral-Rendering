@@ -9,12 +9,14 @@
 #include "hittable.h"
 
 using namespace std;
+vec3 center(200.0, 250.0, 300.0);
 
 class Triangle : public hittable
 {
 private:
     vector<vec3> points;
     material *mat_ptr;
+
 public:
     Triangle()= default;
     Triangle(vector<vec3> pointsInput, material *m)
@@ -50,7 +52,20 @@ bool Triangle::hit(const ray& r, float tmin, float tmax, hit_record& rec) const
     if(t>0.0000001)
     {
         //outPoint = r.origin() + r.direction() * t;
+        rec.p = r.origin() + r.direction() * t;
+        rec.t = t;
+        rec.u = v;
+        rec.v = u;
+        //rec.p = r.point_at_parameter(rec.t);
+        vec3 tmp = (rec.p - center);
+        tmp.make_unit_vector();
 
+        vec3 normal = unit_vector(cross(edge1,edge2));
+        if(acos(dot(normal, tmp)) > 90.0 *M_PI/180.0)
+            normal *= -1;
+        rec.normal = normal;
+        //rec.normal = unit_vector(cross(edge1,edge2));
+        rec.mat_ptr = mat_ptr;
         return true;
     }
     return false;

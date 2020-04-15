@@ -8,23 +8,23 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/cmake-build-debug"/>
+				<Option working_dir="C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="TheNextWeekend">
-				<Option output="N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/cmake-build-debug/bin/TheNextWeekend.exe" prefix_auto="0" extension_auto="0"/>
+				<Option output="C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/cmake-build-debug/bin/TheNextWeekend.exe" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="bin"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/freeglut/include"/>
+					<Add directory="C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/freeglut/include"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
@@ -33,20 +33,20 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 TheNextWeekend"/>
-					<CompileFile command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 TheNextWeekend"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="TheNextWeekend/fast">
-				<Option output="N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/cmake-build-debug/bin/TheNextWeekend.exe" prefix_auto="0" extension_auto="0"/>
+				<Option output="C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/cmake-build-debug/bin/TheNextWeekend.exe" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="bin"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/freeglut/include"/>
+					<Add directory="C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/freeglut/include"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/x86_64-w64-mingw32"/>
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/include/c++/backward"/>
@@ -55,100 +55,100 @@
 					<Add directory="C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 TheNextWeekend/fast"/>
-					<CompileFile command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 TheNextWeekend/fast"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/cmake-build-debug"/>
+				<Option working_dir="C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/cmake-build-debug"/>
+				<Option working_dir="C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/PROGRA~1/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/mingw32-make.exe -f &quot;N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/aabb.h">
+		<Unit filename="C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/aabb.h">
 			<Option target="TheNextWeekend"/>
 		</Unit>
-		<Unit filename="N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/aarect.h">
+		<Unit filename="C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/aarect.h">
 			<Option target="TheNextWeekend"/>
 		</Unit>
-		<Unit filename="N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/box.h">
+		<Unit filename="C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/box.h">
 			<Option target="TheNextWeekend"/>
 		</Unit>
-		<Unit filename="N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/bvh.h">
+		<Unit filename="C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/bvh.h">
 			<Option target="TheNextWeekend"/>
 		</Unit>
-		<Unit filename="N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/camera.h">
+		<Unit filename="C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/camera.h">
 			<Option target="TheNextWeekend"/>
 		</Unit>
-		<Unit filename="N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/constant_medium.h">
+		<Unit filename="C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/constant_medium.h">
 			<Option target="TheNextWeekend"/>
 		</Unit>
-		<Unit filename="N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/hittable.h">
+		<Unit filename="C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/hittable.h">
 			<Option target="TheNextWeekend"/>
 		</Unit>
-		<Unit filename="N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/hittable_list.h">
+		<Unit filename="C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/hittable_list.h">
 			<Option target="TheNextWeekend"/>
 		</Unit>
-		<Unit filename="N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/main.cpp">
+		<Unit filename="C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/main.cpp">
 			<Option target="TheNextWeekend"/>
 		</Unit>
-		<Unit filename="N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/material.h">
+		<Unit filename="C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/material.h">
 			<Option target="TheNextWeekend"/>
 		</Unit>
-		<Unit filename="N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/moving_sphere.h">
+		<Unit filename="C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/moving_sphere.h">
 			<Option target="TheNextWeekend"/>
 		</Unit>
-		<Unit filename="N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/perlin.h">
+		<Unit filename="C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/perlin.h">
 			<Option target="TheNextWeekend"/>
 		</Unit>
-		<Unit filename="N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/random.h">
+		<Unit filename="C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/random.h">
 			<Option target="TheNextWeekend"/>
 		</Unit>
-		<Unit filename="N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/ray.h">
+		<Unit filename="C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/ray.h">
 			<Option target="TheNextWeekend"/>
 		</Unit>
-		<Unit filename="N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/sphere.h">
+		<Unit filename="C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/sphere.h">
 			<Option target="TheNextWeekend"/>
 		</Unit>
-		<Unit filename="N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/stb_image.h">
+		<Unit filename="C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/stb_image.h">
 			<Option target="TheNextWeekend"/>
 		</Unit>
-		<Unit filename="N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/stb_image_write.h">
+		<Unit filename="C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/stb_image_write.h">
 			<Option target="TheNextWeekend"/>
 		</Unit>
-		<Unit filename="N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/surface_texture.h">
+		<Unit filename="C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/surface_texture.h">
 			<Option target="TheNextWeekend"/>
 		</Unit>
-		<Unit filename="N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/svpng.h">
+		<Unit filename="C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/svpng.h">
 			<Option target="TheNextWeekend"/>
 		</Unit>
-		<Unit filename="N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/texture.h">
+		<Unit filename="C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/texture.h">
 			<Option target="TheNextWeekend"/>
 		</Unit>
-		<Unit filename="N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/triangle.h">
+		<Unit filename="C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/triangle.h">
 			<Option target="TheNextWeekend"/>
 		</Unit>
-		<Unit filename="N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/vec3.h">
+		<Unit filename="C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/vec3.h">
 			<Option target="TheNextWeekend"/>
 		</Unit>
-		<Unit filename="N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering/SRC/CMakeLists.txt">
+		<Unit filename="C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

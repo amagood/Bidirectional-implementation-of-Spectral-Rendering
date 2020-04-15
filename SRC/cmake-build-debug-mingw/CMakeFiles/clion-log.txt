@@ -1,0 +1,4 @@
+E:\desktop\CLion-2019.1.3.win\bin\cmake\win\bin\cmake.exe -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" "N:\clion projects\Bidirectional-implementation-of-Spectral-Rendering\Bidirectional-implementation-of-Spectral-Rendering-dev-amagood\SRC"
+-- Configuring done
+-- Generating done
+-- Build files have been written to: N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/cmake-build-debug-mingw
