@@ -73,12 +73,12 @@ preinstall:
 CMakeFiles/TheNextWeekend.dir/all:
 	$(MAKE) -f CMakeFiles\TheNextWeekend.dir\build.make CMakeFiles/TheNextWeekend.dir/depend
 	$(MAKE) -f CMakeFiles\TheNextWeekend.dir\build.make CMakeFiles/TheNextWeekend.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="N:\clion projects\Bidirectional-implementation-of-Spectral-Rendering\Bidirectional-implementation-of-Spectral-Rendering-dev-amagood\SRC\cmake-build-debug-mingw\CMakeFiles" --progress-num=1,2 "Built target TheNextWeekend"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="N:\clion projects\Bidirectional-implementation-of-Spectral-Rendering\Bidirectional-implementation-of-Spectral-Rendering-dev-amagood\SRC\cmake-build-debug-mingw\CMakeFiles" --progress-num=1,2,3 "Built target TheNextWeekend"
 .PHONY : CMakeFiles/TheNextWeekend.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/TheNextWeekend.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "N:\clion projects\Bidirectional-implementation-of-Spectral-Rendering\Bidirectional-implementation-of-Spectral-Rendering-dev-amagood\SRC\cmake-build-debug-mingw\CMakeFiles" 2
+	$(CMAKE_COMMAND) -E cmake_progress_start "N:\clion projects\Bidirectional-implementation-of-Spectral-Rendering\Bidirectional-implementation-of-Spectral-Rendering-dev-amagood\SRC\cmake-build-debug-mingw\CMakeFiles" 3
 	$(MAKE) -f CMakeFiles\Makefile2 CMakeFiles/TheNextWeekend.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "N:\clion projects\Bidirectional-implementation-of-Spectral-Rendering\Bidirectional-implementation-of-Spectral-Rendering-dev-amagood\SRC\cmake-build-debug-mingw\CMakeFiles" 0
 .PHONY : CMakeFiles/TheNextWeekend.dir/rule

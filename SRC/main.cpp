@@ -38,6 +38,23 @@
 vec3 color(const ray& r, hittable *world, int depth) {
     hit_record rec;
     if (world->hit(r, 0.001, std::numeric_limits<float>::max(), rec)) {
+
+        //FIXME always not parallel
+        /*
+        if(rec.mat_ptr->isLaser == true)
+        {
+           // cerr<<"light\n";
+            vec3 tmpNormal = unit_vector(rec.normal);
+            vec3 tmpRay = unit_vector(r.direction());
+            if(!(tmpNormal == tmpRay || tmpNormal == -tmpRay))
+            {
+                //cerr<<"not Parallel\n";
+                return vec3(0,0,0);
+            }
+            cerr<<"Parallel\n";
+        }
+        */
+
         ray scattered;
         vec3 attenuation;
         vec3 emitted = rec.mat_ptr->emitted(rec.u, rec.v, rec.p);
@@ -171,7 +188,6 @@ hittable *cornell_balls() {
     //list[i++] = new translate(new rotate_y(new box(vec3(0, 0, 0), vec3(165, 330, 165), new dielectric(1.5)),  15), vec3(265,0,295));
 
     //addTest by amagood 20200325
-    //FIXME CRASH
     //list[i++] = new Triangle({vec3(400,0,500),vec3(450,500,400),vec3(200,100,300)}, new metal(vec3(0.7, 0.6, 0.5), 0.0));
     list[i++] = new Triangle({vec3(100,0,100),vec3(300,0,100),vec3(200,0,300)}, new dielectric(3.0));
     list[i++] = new Triangle({vec3(100,300,100),vec3(300,300,100),vec3(200,300,300)}, new dielectric(3.0));
@@ -276,9 +292,9 @@ hittable *random_scene() {
     return new bvh_node(list,i, 0.0, 1.0);
 }
 
-constexpr int nx = 400;
-constexpr int ny = 400;
-constexpr int ns = 700;
+constexpr int nx = 800;
+constexpr int ny = 800;
+constexpr int ns = 2000;
 unsigned char rgb[nx*ny*3] = {}, *p = rgb;
 int nowi,nowj;
 

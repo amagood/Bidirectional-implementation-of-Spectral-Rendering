@@ -32,6 +32,7 @@ class vec3 {
         inline float operator[](int i) const { return e[i]; }
         inline float& operator[](int i) { return e[i]; }
 
+        inline bool operator==(const vec3 &v2);
         inline vec3& operator+=(const vec3 &v2);
         inline vec3& operator-=(const vec3 &v2);
         inline vec3& operator*=(const vec3 &v2);
@@ -144,6 +145,11 @@ inline vec3& vec3::operator/=(const float t) {
     e[1] *= k;
     e[2] *= k;
     return *this;
+}
+
+bool vec3::operator==(const vec3 &v2)
+{
+    return r() == v2.r() && g() == v2.g() && b() == v2.b();
 }
 
 inline vec3 unit_vector(vec3 v) {

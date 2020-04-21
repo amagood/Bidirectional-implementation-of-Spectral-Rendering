@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/Color.cpp">
+			<Option target="TheNextWeekend"/>
+		</Unit>
+		<Unit filename="N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/Color.h">
+			<Option target="TheNextWeekend"/>
+		</Unit>
 		<Unit filename="N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/aabb.h">
 			<Option target="TheNextWeekend"/>
 		</Unit>

@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/TheNextWeekend.dir/Color.cpp.obj"
   "CMakeFiles/TheNextWeekend.dir/main.cpp.obj"
   "bin/TheNextWeekend.exe"
   "bin/TheNextWeekend.exe.manifest"

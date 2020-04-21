@@ -122,6 +122,33 @@ TheNextWeekend/fast:
 	$(MAKE) -f CMakeFiles\TheNextWeekend.dir\build.make CMakeFiles/TheNextWeekend.dir/build
 .PHONY : TheNextWeekend/fast
 
+Color.obj: Color.cpp.obj
+
+.PHONY : Color.obj
+
+# target to build an object file
+Color.cpp.obj:
+	$(MAKE) -f CMakeFiles\TheNextWeekend.dir\build.make CMakeFiles/TheNextWeekend.dir/Color.cpp.obj
+.PHONY : Color.cpp.obj
+
+Color.i: Color.cpp.i
+
+.PHONY : Color.i
+
+# target to preprocess a source file
+Color.cpp.i:
+	$(MAKE) -f CMakeFiles\TheNextWeekend.dir\build.make CMakeFiles/TheNextWeekend.dir/Color.cpp.i
+.PHONY : Color.cpp.i
+
+Color.s: Color.cpp.s
+
+.PHONY : Color.s
+
+# target to generate assembly for a file
+Color.cpp.s:
+	$(MAKE) -f CMakeFiles\TheNextWeekend.dir\build.make CMakeFiles/TheNextWeekend.dir/Color.cpp.s
+.PHONY : Color.cpp.s
+
 main.obj: main.cpp.obj
 
 .PHONY : main.obj
@@ -158,6 +185,9 @@ help:
 	@echo ... TheNextWeekend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... Color.obj
+	@echo ... Color.i
+	@echo ... Color.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
