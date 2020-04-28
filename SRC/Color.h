@@ -22,6 +22,7 @@ private:
 public:
     inline spectralTable();
     [[nodiscard]] inline vec3 getXYZ(int lambda);
+    [[nodiscard]] inline vec3 getRGB(int lambda);
 
 };
 

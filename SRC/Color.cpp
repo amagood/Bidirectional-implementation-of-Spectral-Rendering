@@ -37,6 +37,13 @@ vec3 spectralTable::getXYZ(int lambda)
 {
     return table[lambda];
 }
+vec3 spectralTable::getRGB(int lambda)
+{
+    vec3 tmp = table[lambda];
+    double a=tmp.x(),b=tmp.y(),c=tmp.z();
+
+}
+
 
 spectralTable::spectralTable()
 {
@@ -442,3 +449,4 @@ spectralTable::spectralTable()
     table[779] = vec3(0.0000, 0.0000, 0.0000);
     table[780] = vec3(0.0000, 0.0000, 0.0000);
 }
+

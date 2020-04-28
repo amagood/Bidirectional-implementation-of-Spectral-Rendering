@@ -37,6 +37,8 @@
 
 #define FPS 144
 
+const extern spectralTable table;
+
 vec3 color(const ray& r, hittable *world, int depth) {
     hit_record rec;
     if (world->hit(r, 0.001, std::numeric_limits<float>::max(), rec)) {
