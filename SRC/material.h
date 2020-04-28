@@ -15,7 +15,7 @@
 #include "ray.h"
 #include "texture.h"
 #include "random.h"
-
+#include "Color.h"
 
 float schlick(float cosine, float ref_idx) {
     float r0 = (1-ref_idx) / (1+ref_idx);
@@ -74,7 +74,7 @@ class isotropic : public material {
     public:
         isotropic(texture *a) : albedo(a) {}
         virtual bool scatter(const ray& r_in, const hit_record& rec, vec3& attenuation, ray& scattered) const  {
-             scattered = ray(rec.p, random_in_unit_sphere(), r_in.time());
+             scattered = ray(rec.p, random_in_unit_sphere(), r_in.ray_wavelength(), r_in.time());
              attenuation = albedo->value(rec.u, rec.v, rec.p);
              return true;
         }
@@ -86,7 +86,7 @@ class lambertian : public material {
         lambertian(texture *a) : albedo(a) {}
         virtual bool scatter(const ray& r_in, const hit_record& rec, vec3& attenuation, ray& scattered) const  {
              vec3 target = rec.p + rec.normal + random_in_unit_sphere();
-             scattered = ray(rec.p, target-rec.p, r_in.time());
+             scattered = ray(rec.p, target-rec.p, r_in.ray_wavelength(), r_in.time());
              attenuation = albedo->value(rec.u, rec.v, rec.p);
              return true;
         }
@@ -99,7 +99,7 @@ class metal : public material {
         metal(const vec3& a, float f) : albedo(a) { if (f < 1) fuzz = f; else fuzz = 1; }
         virtual bool scatter(const ray& r_in, const hit_record& rec, vec3& attenuation, ray& scattered) const  {
             vec3 reflected = reflect(unit_vector(r_in.direction()), rec.normal);
-            scattered = ray(rec.p, reflected + fuzz*random_in_unit_sphere(), r_in.time());
+            scattered = ray(rec.p, reflected + fuzz*random_in_unit_sphere(), r_in.ray_wavelength(), r_in.time());
             attenuation = albedo;
             return (dot(scattered.direction(), rec.normal) > 0);
         }
@@ -108,43 +108,45 @@ class metal : public material {
 };
 
 class dielectric : public material {
-    public:
-        dielectric(float ri) : ref_idx(ri) {}
-        virtual bool scatter(const ray& r_in, const hit_record& rec, vec3& attenuation, ray& scattered) const  {
-             vec3 outward_normal;
-             vec3 reflected = reflect(r_in.direction(), rec.normal);
-             float ni_over_nt;
-             attenuation = vec3(1.0, 1.0, 1.0);
-             vec3 refracted;
-             float reflect_prob;
-             float cosine;
-             if (dot(r_in.direction(), rec.normal) > 0) {
-                  outward_normal = -rec.normal;
-                  ni_over_nt = ref_idx;
-                  cosine = ref_idx * dot(r_in.direction(), rec.normal) / r_in.direction().length();
-             }
-             else {
-                  outward_normal = rec.normal;
-                  ni_over_nt = 1.0 / ref_idx;
-                  cosine = -dot(r_in.direction(), rec.normal) / r_in.direction().length();
-             }
-             if (refract(r_in.direction(), outward_normal, ni_over_nt, refracted)) {
-                reflect_prob = schlick(cosine, ref_idx);
-             }
-             else {
-                scattered = ray(rec.p, reflected, r_in.time());
-                reflect_prob = 1.0;
-             }
-             if (random_double() < reflect_prob) {
-                scattered = ray(rec.p, reflected, r_in.time());
-             }
-             else {
-                scattered = ray(rec.p, refracted, r_in.time());
-             }
-             return true;
+public:
+    dielectric(int ri) : glass_type(ri) {} // 0~5
+    double B_C[6][2] = {{1.4580, 0.00354},{1.5046, 0.00420},{1.5220, 0.00459},{1.5690, 0.00531},{1.6700, 0.00743},{1.7280, 0.01342}};
+    virtual bool scatter(const ray& r_in, const hit_record& rec, vec3& attenuation, ray& scattered) const  {
+        vec3 outward_normal;
+        vec3 reflected = reflect(r_in.direction(), rec.normal);
+        float ni_over_nt = cauchyRefractionIndex(r_in.ray_wavelength(), B_C[glass_type][0], B_C[glass_type][1]);
+        attenuation = vec3(1.0, 1.0, 1.0);
+        vec3 refracted;
+        float reflect_prob;
+        float cosine;
+        if (dot(r_in.direction(), rec.normal) > 0) {
+            outward_normal = -rec.normal;
+            //ni_over_nt = ref_idx;
+            cosine = ni_over_nt * dot(r_in.direction(), rec.normal) / r_in.direction().length();
         }
+        else {
+            outward_normal = rec.normal;
+            ni_over_nt = 1.0 / ni_over_nt;
+            cosine = -dot(r_in.direction(), rec.normal) / r_in.direction().length();
+        }
+        if (refract(r_in.direction(), outward_normal, ni_over_nt, refracted)) {
+            reflect_prob = schlick(cosine, ni_over_nt);
+        }
+        else {
+            scattered = ray(rec.p, reflected, r_in.ray_wavelength(), r_in.time());
+            reflect_prob = 1.0;
+        }
+        if (random_double() < reflect_prob) {
+            scattered = ray(rec.p, reflected, r_in.ray_wavelength(), r_in.time());
+        }
+        else {
+            scattered = ray(rec.p, refracted, r_in.ray_wavelength(), r_in.time());
+        }
+        return true;
+    }
 
-        float ref_idx;
+    float ref_idx;
+    int glass_type;
 };
 
 #endif

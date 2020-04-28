@@ -3,10 +3,12 @@
 
 CMakeFiles/TheNextWeekend.dir/Color.cpp.obj: ../Color.cpp
 CMakeFiles/TheNextWeekend.dir/Color.cpp.obj: ../Color.h
+CMakeFiles/TheNextWeekend.dir/Color.cpp.obj: ../vec3.h
 
 CMakeFiles/TheNextWeekend.dir/main.cpp.obj: ../freeglut/include/GL/freeglut.h
 CMakeFiles/TheNextWeekend.dir/main.cpp.obj: ../freeglut/include/GL/freeglut_ext.h
 CMakeFiles/TheNextWeekend.dir/main.cpp.obj: ../freeglut/include/GL/freeglut_std.h
+CMakeFiles/TheNextWeekend.dir/main.cpp.obj: ../Color.h
 CMakeFiles/TheNextWeekend.dir/main.cpp.obj: ../aabb.h
 CMakeFiles/TheNextWeekend.dir/main.cpp.obj: ../aarect.h
 CMakeFiles/TheNextWeekend.dir/main.cpp.obj: ../box.h

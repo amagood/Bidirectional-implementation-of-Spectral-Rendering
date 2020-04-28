@@ -32,6 +32,8 @@
 #include <omp.h>
 #include  <GL/freeglut.h>
 #include <thread>
+#include <ctime>
+#include <cstdlib>
 
 #define FPS 144
 
@@ -419,6 +421,8 @@ void reshape(int w, int h)
 
 int main(int argc, char *argv[])
 {
+    srand(time(nullptr));
+
     std::thread mthread(run);
 
     glutInit(&argc, argv);
