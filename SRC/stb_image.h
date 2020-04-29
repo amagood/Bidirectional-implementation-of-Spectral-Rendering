@@ -1521,7 +1521,7 @@ static int stbi__build_huffman(stbi__huffman *h, int *count)
    }
    h->maxcode[j] = 0xffffffff;
 
-   // build non-spec acceleration table; 255 is flag for not-accelerated
+   // build non-spec acceleration Table; 255 is flag for not-accelerated
    memset(h->fast, 255, 1 << FAST_BITS);
    for (i=0; i < k; ++i) {
       int s = h->size[i];
@@ -1536,7 +1536,7 @@ static int stbi__build_huffman(stbi__huffman *h, int *count)
    return 1;
 }
 
-// build a table that decodes both magnitude and value of small ACs in
+// build a Table that decodes both magnitude and value of small ACs in
 // one go.
 static void stbi__build_fast_ac(stbi__int16 *fast_ac, stbi__huffman *h)
 {
@@ -1555,7 +1555,7 @@ static void stbi__build_fast_ac(stbi__int16 *fast_ac, stbi__huffman *h)
             int k = ((i << len) & ((1 << FAST_BITS) - 1)) >> (FAST_BITS - magbits);
             int m = 1 << (magbits - 1);
             if (k < m) k += (-1 << magbits) + 1;
-            // if the result is small enough, we can fit it in fast_ac table
+            // if the result is small enough, we can fit it in fast_ac Table
             if (k >= -128 && k <= 127)
                fast_ac[i] = (stbi__int16) ((k << 8) + (run << 4) + (len + magbits));
          }
@@ -2587,21 +2587,21 @@ static int stbi__process_marker(stbi__jpeg *z, int m)
          z->restart_interval = stbi__get16be(z->s);
          return 1;
 
-      case 0xDB: // DQT - define quantization table
+      case 0xDB: // DQT - define quantization Table
          L = stbi__get16be(z->s)-2;
          while (L > 0) {
             int q = stbi__get8(z->s);
             int p = q >> 4;
             int t = q & 15,i;
             if (p != 0) return stbi__err("bad DQT type","Corrupt JPEG");
-            if (t > 3) return stbi__err("bad DQT table","Corrupt JPEG");
+            if (t > 3) return stbi__err("bad DQT Table","Corrupt JPEG");
             for (i=0; i < 64; ++i)
                z->dequant[t][stbi__jpeg_dezigzag[i]] = stbi__get8(z->s);
             L -= 65;
          }
          return L==0;
 
-      case 0xC4: // DHT - define huffman table
+      case 0xC4: // DHT - define huffman Table
          L = stbi__get16be(z->s)-2;
          while (L > 0) {
             stbi_uc *v;
@@ -3561,7 +3561,7 @@ stbi_inline static unsigned int stbi__zreceive(stbi__zbuf *z, int n)
 static int stbi__zhuffman_decode_slowpath(stbi__zbuf *a, stbi__zhuffman *z)
 {
    int b,s,k;
-   // not resolved by fast table, so compute it the slow way
+   // not resolved by fast Table, so compute it the slow way
    // use jpeg approach, which requires MSbits at top
    k = stbi__bit_reverse(a->code_buffer, 16);
    for (s=STBI__ZFAST_BITS+1; ; ++s)
@@ -5711,7 +5711,7 @@ static stbi_uc *stbi__gif_load_next(stbi__context *s, stbi__gif *g, int *comp, i
                   g->pal[g->transparent][3] = 0;
                g->color_table = (stbi_uc *) g->pal;
             } else
-               return stbi__errpuc("missing color table", "Corrupt GIF");
+               return stbi__errpuc("missing color Table", "Corrupt GIF");
 
             o = stbi__process_gif_raster(s, g);
             if (o == NULL) return NULL;

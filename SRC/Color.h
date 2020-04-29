@@ -17,14 +17,13 @@ void RGB2XYZ(float R, float G, float B, float *X, float *Y, float *Z);
 class spectralTable
 {
 private:
-    static __gnu_pbds::gp_hash_table<int, vec3> table;
+    __gnu_pbds::gp_hash_table<int, vec3> data;
 
 public:
-    inline spectralTable();
-    [[nodiscard]] inline vec3 getXYZ(int lambda);
-    [[nodiscard]] inline vec3 getRGB(int lambda);
+    spectralTable();
+    vec3 getRGB(int lambda);
+
 
 };
-
 
 #endif //THENEXTWEEKEND_COLOR_H

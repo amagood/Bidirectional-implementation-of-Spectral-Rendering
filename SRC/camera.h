@@ -47,8 +47,8 @@ class camera {
             vec3 rd = lens_radius*random_in_unit_disk();
             vec3 offset = u * rd.x() + v * rd.y();
             float time = time0 + random_double()*(time1-time0);
-            double wavelength = 380 + rand() % 400;
-            wavelength /= 1000.0;
+            int wavelength = 380 + rand() % 400;
+            //wavelength /= 1000.0;
             return ray(origin + offset, lower_left_corner + s*horizontal + t*vertical - origin - offset, wavelength, time);
         }
 

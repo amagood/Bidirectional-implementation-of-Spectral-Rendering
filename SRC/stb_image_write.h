@@ -499,7 +499,7 @@ unsigned char * stbi_zlib_compress(unsigned char *data, int data_len, int *out_l
             if (d >= best) best=d,bestloc=hlist[j];
          }
       }
-      // when hash table entry is too long, delete half the entries
+      // when hash Table entry is too long, delete half the entries
       if (hash_table[h] && stbiw__sbn(hash_table[h]) == 2*quality) {
          STBIW_MEMMOVE(hash_table[h], hash_table[h]+quality, sizeof(hash_table[h][0])*quality);
          stbiw__sbn(hash_table[h]) = quality;

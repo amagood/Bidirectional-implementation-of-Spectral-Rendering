@@ -92,6 +92,7 @@ bool Triangle::bounding_box(float t0, float t1, aabb& box) const
     float maxZ = max3(points[0].z(),points[1].z(),points[2].z());
 
     box = aabb(vec3(minX,minY,minZ), vec3(maxX,maxY,maxZ));
+    return true;
 }
 
 #endif //TRIANGLE_H

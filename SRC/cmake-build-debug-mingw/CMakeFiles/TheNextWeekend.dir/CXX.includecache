@@ -36,6 +36,12 @@ GL/glu.h
 stdlib.h
 -
 
+N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/Color.cpp
+Color.h
+N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/Color.h
+cmath
+-
+
 N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/Color.h
 ext/pb_ds/assoc_container.hpp
 -

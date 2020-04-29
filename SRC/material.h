@@ -114,7 +114,7 @@ public:
     virtual bool scatter(const ray& r_in, const hit_record& rec, vec3& attenuation, ray& scattered) const  {
         vec3 outward_normal;
         vec3 reflected = reflect(r_in.direction(), rec.normal);
-        float ni_over_nt = cauchyRefractionIndex(r_in.ray_wavelength(), B_C[glass_type][0], B_C[glass_type][1]);
+        float ni_over_nt = cauchyRefractionIndex(r_in.ray_wavelength()/1000.0, B_C[glass_type][0], B_C[glass_type][1]);
         attenuation = vec3(1.0, 1.0, 1.0);
         vec3 refracted;
         float reflect_prob;

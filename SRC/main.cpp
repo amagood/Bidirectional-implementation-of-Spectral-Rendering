@@ -37,9 +37,9 @@
 
 #define FPS 144
 
-const extern spectralTable table;
+spectralTable table;
 
-vec3 color(const ray& r, hittable *world, int depth) {
+vec3 color(ray& r, hittable *world, int depth) {
     hit_record rec;
     if (world->hit(r, 0.001, std::numeric_limits<float>::max(), rec)) {
 
@@ -62,12 +62,18 @@ vec3 color(const ray& r, hittable *world, int depth) {
         ray scattered;
         vec3 attenuation;
         vec3 emitted = rec.mat_ptr->emitted(rec.u, rec.v, rec.p);
-        if (depth < 50 && rec.mat_ptr->scatter(r, rec, attenuation, scattered)) 
-             return emitted + attenuation*color(scattered, world, depth+1);
-        else 
+        if (depth < 50 && rec.mat_ptr->scatter(r, rec, attenuation, scattered))
+        {
+            if(r.color.x() > attenuation.x()) r.color.e[0] = attenuation.x();
+            if(r.color.y() > attenuation.y()) r.color.e[1] = attenuation.y();
+            if(r.color.z() > attenuation.z()) r.color.e[2] = attenuation.z();
+            attenuation = r.color;
+            return emitted + attenuation*color(scattered, world, depth+1);
+        }
+        else
             return emitted;
     }
-    else 
+    else
         return vec3(0,0,0);
 }
 
@@ -302,6 +308,8 @@ constexpr int ns = 2000;
 unsigned char rgb[nx*ny*3] = {}, *p = rgb;
 int nowi,nowj;
 
+
+
 int run() {
 
     std::cerr << "P3\n" << nx << " " << ny << "\n255\n";
@@ -342,6 +350,9 @@ int run() {
                 float u = float(i+random_double())/ float(nx);
                 float v = float(j+random_double())/ float(ny);
                 ray r = cam.get_ray(u, v);
+
+                r.color = table.getRGB(r.lambda);
+
                 vec3 p = r.point_at_parameter(2.0);
                 col += color(r, world,0);
             }
@@ -367,7 +378,7 @@ int run() {
     fclose(output);
     std::cerr<<"saved OwO"<<std::endl;
 
-
+    return 0;
 }
 
 void timer(int)
