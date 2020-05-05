@@ -1,0 +1,3 @@
+C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/cmake-build-debug-mingw/CMakeFiles/TheNextWeekend.dir
+C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/cmake-build-debug-mingw/CMakeFiles/edit_cache.dir
+C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/cmake-build-debug-mingw/CMakeFiles/rebuild_cache.dir
