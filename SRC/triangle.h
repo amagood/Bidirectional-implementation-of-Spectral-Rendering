@@ -54,8 +54,8 @@ bool Triangle::hit(const ray& r, float tmin, float tmax, hit_record& rec) const
         //outPoint = r.origin() + r.direction() * t;
         rec.p = r.origin() + r.direction() * t;
         rec.t = t;
-        rec.u = v;
-        rec.v = u;
+        rec.u = u;
+        rec.v = v;
         //rec.p = r.point_at_parameter(rec.t);
         vec3 tmp = (rec.p - center);
         tmp.make_unit_vector();
