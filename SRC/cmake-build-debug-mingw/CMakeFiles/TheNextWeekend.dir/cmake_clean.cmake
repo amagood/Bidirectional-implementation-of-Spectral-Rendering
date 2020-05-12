@@ -1,9 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/TheNextWeekend.dir/Color.cpp.obj"
   "CMakeFiles/TheNextWeekend.dir/main.cpp.obj"
-  "TheNextWeekend.exe"
-  "TheNextWeekend.exe.manifest"
-  "TheNextWeekend.pdb"
+  "bin/TheNextWeekend.exe"
+  "bin/TheNextWeekend.exe.manifest"
+  "bin/TheNextWeekend.pdb"
   "libTheNextWeekend.dll.a"
 )
 

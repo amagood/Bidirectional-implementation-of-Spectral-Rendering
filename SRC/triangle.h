@@ -26,9 +26,19 @@ public:
     }
     bool hit(const ray& r, float tmin, float tmax, hit_record& rec) const final;
     bool bounding_box(float t0, float t1, aabb& box) const final;
+    [[nodiscard]] double shalloest() const final
+    {
+        double a = points[0].z(), b = points[1].z(), c = points[2].z();
+        return (a<b)? (a<c?a:c) : (b<c?b:c);
+    }
+
+    string getShapeInfo() const final;
 
 };
-
+string Triangle::getShapeInfo() const
+{
+    return "triangle";
+}
 bool Triangle::hit(const ray& r, float tmin, float tmax, hit_record& rec) const
 {
     vec3 edge1 = points[1] - points[0];

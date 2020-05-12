@@ -43,46 +43,7 @@
 
 spectralTable table;
 
-//vec3 color(ray& r, hittable *world, int depth) {
-//    hit_record rec;
-//    if (world->hit(r, 0.001, std::numeric_limits<float>::max(), rec)) {
-//
-//        //FIXME always not parallel
-//        /*
-//        if(rec.mat_ptr->isLaser == true)
-//        {
-//           // cerr<<"light\n";
-//            vec3 tmpNormal = unit_vector(rec.normal);
-//            vec3 tmpRay = unit_vector(r.direction());
-//            if(!(tmpNormal == tmpRay || tmpNormal == -tmpRay))
-//            {
-//                //cerr<<"not Parallel\n";
-//                return vec3(0,0,0);
-//            }
-//            cerr<<"Parallel\n";
-//        }
-//        */
-//
-//        ray scattered;
-//        vec3 attenuation;
-//        vec3 emitted = rec.mat_ptr->emitted(rec.u, rec.v, rec.p);
-//        if (depth < 50 && rec.mat_ptr->scatter(r, rec, attenuation, scattered))
-//        {
-//            if(r.color.x() > attenuation.x()) r.color.e[0] = attenuation.x();
-//            if(r.color.y() > attenuation.y()) r.color.e[1] = attenuation.y();
-//            if(r.color.z() > attenuation.z()) r.color.e[2] = attenuation.z();
-//            scattered.color = r.color;
-//            attenuation = r.color;
-//            return emitted + attenuation * color(scattered, world, depth+1);
-//        }
-//        else
-//            return emitted;
-//    }
-//    else
-//        return vec3(0,0,0);
-//}
-
-vec3 color(ray& r, hittable *world, int depth, int tmp) {
+vec3 color(ray& r, hittable *world, int depth) {
     hit_record rec;
     if (world->hit(r, 0.001, std::numeric_limits<float>::max(), rec)) {
 
@@ -105,7 +66,6 @@ vec3 color(ray& r, hittable *world, int depth, int tmp) {
         ray scattered;
         vec3 attenuation;
         vec3 emitted = rec.mat_ptr->emitted(rec.u, rec.v, rec.p);
-        if(emitted.squared_length() > 0) tmp += 1;
         if (depth < 50 && rec.mat_ptr->scatter(r, rec, attenuation, scattered))
         {
             //if(r.color.x() > attenuation.x()) r.color.e[0] = attenuation.x();
@@ -295,8 +255,7 @@ hittable *cornell_balls() {
 
     //addTest by amagood 20200325
     //list[i++] = new Triangle({vec3(400,0,500),vec3(450,500,400),vec3(200,100,300)}, new metal(vec3(0.7, 0.6, 0.5), 0.0));
-    list[i++] = new Triangle({vec3(300,305,136.6),vec3(300,5,136.6),vec3(400,5,136.6)}, new dielectric(2));
-    list[i++] = new Triangle({vec3(400,305,136.6),vec3(400,5,136.6),vec3(300,305,136.6)}, new dielectric(2));
+
 
     list[i++] = new Triangle({vec3(350,5,50),vec3(300,5,136.6),vec3(400,5,136.6)}, new dielectric(2));
 
@@ -307,6 +266,34 @@ hittable *cornell_balls() {
 
     list[i++] = new Triangle({vec3(300,5,136.6),vec3(350,5,50),vec3(350,305,50)}, new dielectric(2));
     list[i++] = new Triangle({vec3(300,5,136.6),vec3(300,305,136.6),vec3(350,305,50)}, new dielectric(2));
+
+    list[i++] = new Triangle({vec3(300,305,136.6),vec3(300,5,136.6),vec3(400,5,136.6)}, new dielectric(2));
+    list[i++] = new Triangle({vec3(400,305,136.6),vec3(400,5,136.6),vec3(300,305,136.6)}, new dielectric(2));
+
+    for(int P = 0; P < i; P++)
+    {
+        cerr << list[P]->shalloest() << ' ';
+    }cerr<<endl;
+
+    sort(&list[0], &list[i],
+        [](hittable *a, hittable *b){
+
+            ///sort only triangle for now, in order to prevent refraction error
+            if(a->getShapeInfo() == "triangle" && b->getShapeInfo() == "triangle")
+            {
+                //cerr<<a->deepest()<< ' '<< b->shalloest() << "OWO\n";
+                return a->shalloest() > b->shalloest();
+            }
+
+            return false;
+
+        });
+
+    for(int P = 0; P < i; P++)
+    {
+        cerr << list[P]->shalloest() << ' ';
+    }cerr<<endl;
+
     return new hittable_list(list,i);
 }
 
@@ -378,14 +365,14 @@ hittable *random_scene() {
     for (int a = -10; a < 10; a++) {
         for (int b = -10; b < 10; b++) {
             float choose_mat = random_double();
-            vec3 center(a+0.9*random_double(),0.2,b+0.9*random_double()); 
-            if ((center-vec3(4,0.2,0)).length() > 0.9) { 
+            vec3 center(a+0.9*random_double(),0.2,b+0.9*random_double());
+            if ((center-vec3(4,0.2,0)).length() > 0.9) {
                 if (choose_mat < 0.8) {  // diffuse
                     list[i++] = new moving_sphere(center, center+vec3(0,0.5*random_double(), 0), 0.0, 1.0, 0.2, new lambertian(new constant_texture(vec3(random_double()*random_double(), random_double()*random_double(), random_double()*random_double()))));
                 }
                 else if (choose_mat < 0.95) { // metal
                     list[i++] = new sphere(center, 0.2,
-                            new metal(vec3(0.5*(1 + random_double()), 0.5*(1 + random_double()), 0.5*(1 + random_double())),  0.5*random_double()));
+                                           new metal(vec3(0.5*(1 + random_double()), 0.5*(1 + random_double()), 0.5*(1 + random_double())),  0.5*random_double()));
                 }
                 else {  // glass
                     list[i++] = new sphere(center, 0.2, new dielectric(1.5));
@@ -404,7 +391,7 @@ hittable *random_scene() {
 
 constexpr int nx = 800;
 constexpr int ny = 800;
-constexpr int ns = 1000;
+constexpr int ns = 2000;
 unsigned char rgb[nx*ny*3] = {}, *p = rgb;
 int nowi,nowj;
 
@@ -445,7 +432,7 @@ int run() {
             nowj= j;
 
             vec3 col(0, 0, 0);
-            #pragma omp parallel for reduction(vecPlus:col)
+#pragma omp parallel for reduction(vecPlus:col)
             for (int s=0; s < ns; s++) {
                 float u = float(i+random_double())/ float(nx);
                 float v = float(j+random_double())/ float(ny);
@@ -459,9 +446,9 @@ int run() {
             }
             col /= float(ns);
             //col = vec3( sqrt(col[0]), sqrt(col[1]), sqrt(col[2]) );
-            int ir = int(255.99*col[0]); 
-            int ig = int(255.99*col[1]); 
-            int ib = int(255.99*col[2]); 
+            int ir = int(255.99*col[0]);
+            int ig = int(255.99*col[1]);
+            int ib = int(255.99*col[2]);
             //std::cout << ir << " " << ig << " " << ib << "\n";
 
             *p++  = min(ir, 255);
