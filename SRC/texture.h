@@ -53,6 +53,8 @@ class noise_texture : public texture {
 //            return vec3(1,1,1)*0.5*(1 + noise.turb(scale * p));
 //            return vec3(1,1,1)*noise.turb(scale * p);
               return vec3(1,1,1)*0.5*(1 + sin(scale*p.x()/50 + 5*noise.turb(scale*p/50))) ;
+              //if(u > 0.75) return vec3(1,1,1);
+              //else return vec3(0,0,0);
 
         }
         perlin noise;

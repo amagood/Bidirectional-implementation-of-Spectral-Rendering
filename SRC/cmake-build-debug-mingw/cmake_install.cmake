@@ -1,4 +1,4 @@
-# Install script for directory: N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC
+# Install script for directory: C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/cmake-build-debug-mingw/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/cmake-build-debug-mingw/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

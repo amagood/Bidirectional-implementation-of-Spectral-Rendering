@@ -9,7 +9,7 @@
 #include "hittable.h"
 
 using namespace std;
-vec3 center(200.0, 250.0, 300.0);
+vec3 center(350.0,155.0,118.3);
 
 class Triangle : public hittable
 {
@@ -41,7 +41,7 @@ bool Triangle::hit(const ray& r, float tmin, float tmax, hit_record& rec) const
     double f = 1.0/a;
     vec3 s = r.origin() - points[0];
     double u = f * (dot(s,h));
-    if(u<000||u>1.0)
+    if(u<0.0||u>1.0)
         return false;
     vec3 q = cross(s,edge1);
     double v = f * dot(r.direction(),q);
@@ -49,10 +49,11 @@ bool Triangle::hit(const ray& r, float tmin, float tmax, hit_record& rec) const
         return false;
 
     float t = f * dot(edge2, q);
-    if(t>0.0000001)
+    if(t>0.0)
     {
         //outPoint = r.origin() + r.direction() * t;
-        rec.p = r.origin() + r.direction() * t;
+        //rec.p = r.origin() + r.direction() * t;
+        rec.p = r.point_at_parameter(t);
         rec.t = t;
         rec.u = u;
         rec.v = v;
@@ -61,8 +62,10 @@ bool Triangle::hit(const ray& r, float tmin, float tmax, hit_record& rec) const
         tmp.make_unit_vector();
 
         vec3 normal = unit_vector(cross(edge1,edge2));
-        if(acos(dot(normal, tmp)) > 90.0 *M_PI/180.0)
+        if(dot(normal, tmp) < 0)
+        {
             normal *= -1;
+        }
         rec.normal = normal;
         //rec.normal = unit_vector(cross(edge1,edge2));
         rec.mat_ptr = mat_ptr;
@@ -91,7 +94,7 @@ bool Triangle::bounding_box(float t0, float t1, aabb& box) const
     float maxY = max3(points[0].y(),points[1].y(),points[2].y());
     float maxZ = max3(points[0].z(),points[1].z(),points[2].z());
 
-    box = aabb(vec3(minX,minY,minZ), vec3(maxX,maxY,maxZ));
+    box = aabb(vec3(300.0,5.0,50.0), vec3(400.0,305.0,136.6));
     return true;
 }
 

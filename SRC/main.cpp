@@ -108,16 +108,65 @@ vec3 color(ray& r, hittable *world, int depth, int tmp) {
         if(emitted.squared_length() > 0) tmp += 1;
         if (depth < 50 && rec.mat_ptr->scatter(r, rec, attenuation, scattered))
         {
+            //if(r.color.x() > attenuation.x()) r.color.e[0] = attenuation.x();
+            //if(r.color.y() > attenuation.y()) r.color.e[1] = attenuation.y();
+            //if(r.color.z() > attenuation.z()) r.color.e[2] = attenuation.z();
+            //scattered.color = r.color;
+            //attenuation = r.color;
+            return emitted + attenuation * color(scattered, world, depth+1);
+        }
+        else
+            return emitted;
+    }
+    else
+        return vec3(0,0,0);
+}
+
+vec3 color(ray& r, hittable *world, int depth, int tmp, vec3 emitted) {
+    hit_record rec;
+    if (world->hit(r, 0.001, std::numeric_limits<float>::max(), rec)) {
+
+        //FIXME always not parallel
+        /*
+        if(rec.mat_ptr->isLaser == true)
+        {
+           // cerr<<"light\n";
+            vec3 tmpNormal = unit_vector(rec.normal);
+            vec3 tmpRay = unit_vector(r.direction());
+            if(!(tmpNormal == tmpRay || tmpNormal == -tmpRay))
+            {
+                //cerr<<"not Parallel\n";
+                return vec3(0,0,0);
+            }
+            cerr<<"Parallel\n";
+        }
+        */
+
+        ray scattered;
+        vec3 attenuation;
+        vec3 tmp_emitted = rec.mat_ptr->emitted(rec.u, rec.v, rec.p);
+        if(tmp_emitted.length() > 0)
+        {
+            emitted += tmp_emitted;
+            tmp ++;
+        }
+        //if(emitted.length() > 0) tmp += 1;
+        if (depth < 50 && rec.mat_ptr->scatter(r, rec, attenuation, scattered))
+        {
             if(r.color.x() > attenuation.x()) r.color.e[0] = attenuation.x();
             if(r.color.y() > attenuation.y()) r.color.e[1] = attenuation.y();
             if(r.color.z() > attenuation.z()) r.color.e[2] = attenuation.z();
             scattered.color = r.color;
-            attenuation = r.color;
-            return color(scattered, world, depth+1,tmp);
+            //attenuation = r.color;
+            return color(scattered, world, depth+1,tmp,emitted);
         }
         else
+        {
             if(tmp > 0) return r.color * emitted / tmp;
-            else return emitted;
+            else return r.color;
+            //else return emitted;
+        }
+
     }
     else
         return vec3(0,0,0);
@@ -239,21 +288,25 @@ hittable *cornell_balls() {
     list[i++] = new flip_normals(new xz_rect(0, 555, 0, 555, 555, white));
     list[i++] = new xz_rect(0, 555, 0, 555, 0, white);
     list[i++] = new flip_normals(new xy_rect(0, 555, 0, 555, 555, tmp));
-    hittable *boundary = new sphere(vec3(150, 100, 100), 100, new dielectric(4));
+    hittable *boundary = new sphere(vec3(150, 100, 150), 100, new dielectric(4));
     list[i++] = boundary;
     //list[i++] = new constant_medium(boundary, 0.1, new constant_texture(vec3(1.0, 1.0, 1.0)));
     //list[i++] = new translate(new rotate_y(new box(vec3(0, 0, 0), vec3(165, 330, 165), new dielectric(1.5)),  15), vec3(265,0,295));
 
     //addTest by amagood 20200325
     //list[i++] = new Triangle({vec3(400,0,500),vec3(450,500,400),vec3(200,100,300)}, new metal(vec3(0.7, 0.6, 0.5), 0.0));
-    list[i++] = new Triangle({vec3(350,5,50),vec3(300,5,136.6),vec3(400,5,136.6)}, new dielectric(2));
-    list[i++] = new Triangle({vec3(350,305,50),vec3(300,305,136.6),vec3(400,305,136.6)}, new dielectric(2));
-    list[i++] = new Triangle({vec3(350,5,50),vec3(350,305,50),vec3(400,305,136.6)}, new dielectric(2));
-    list[i++] = new Triangle({vec3(350,5,50),vec3(400,5,136.6),vec3(400,305,136.6)}, new dielectric(2));
-    list[i++] = new Triangle({vec3(300,5,136.6),vec3(350,5,50),vec3(350,305,50)}, new dielectric(2));
-    list[i++] = new Triangle({vec3(300,5,136.6),vec3(300,305,136.6),vec3(350,305,50)}, new dielectric(2));
     list[i++] = new Triangle({vec3(300,305,136.6),vec3(300,5,136.6),vec3(400,5,136.6)}, new dielectric(2));
     list[i++] = new Triangle({vec3(400,305,136.6),vec3(400,5,136.6),vec3(300,305,136.6)}, new dielectric(2));
+
+    list[i++] = new Triangle({vec3(350,5,50),vec3(300,5,136.6),vec3(400,5,136.6)}, new dielectric(2));
+
+    list[i++] = new Triangle({vec3(350,305,50),vec3(300,305,136.6),vec3(400,305,136.6)}, new dielectric(2));
+
+    list[i++] = new Triangle({vec3(350,5,50),vec3(350,305,50),vec3(400,305,136.6)}, new dielectric(2));
+    list[i++] = new Triangle({vec3(350,5,50),vec3(400,5,136.6),vec3(400,305,136.6)}, new dielectric(2));
+
+    list[i++] = new Triangle({vec3(300,5,136.6),vec3(350,5,50),vec3(350,305,50)}, new dielectric(2));
+    list[i++] = new Triangle({vec3(300,5,136.6),vec3(300,305,136.6),vec3(350,305,50)}, new dielectric(2));
     return new hittable_list(list,i);
 }
 
@@ -397,11 +450,12 @@ int run() {
                 float u = float(i+random_double())/ float(nx);
                 float v = float(j+random_double())/ float(ny);
                 ray r = cam.get_ray(u, v);
-
-                r.color = table.getRGB(r.lambda);
+                vec3 tmp_XYZ = table.getRGB(r.lambda);
+                XYZ2RGB(tmp_XYZ.x(),tmp_XYZ.y(),tmp_XYZ.z(),&r.color.e[0],&r.color.e[1],&r.color.e[2]);
 
                 vec3 p = r.point_at_parameter(2.0);
-                col += color(r, world,0,0);
+                col += color(r, world,0,0,vec3(0,0,0));
+                //col += color(r, world,0);
             }
             col /= float(ns);
             //col = vec3( sqrt(col[0]), sqrt(col[1]), sqrt(col[2]) );

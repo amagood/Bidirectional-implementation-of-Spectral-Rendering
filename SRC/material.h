@@ -113,8 +113,9 @@ public:
     double B_C[6][2] = {{1.4580, 0.00354},{1.5046, 0.00420},{1.5220, 0.00459},{1.5690, 0.00531},{1.6700, 0.00743},{1.7280, 0.01342}};
     virtual bool scatter(const ray& r_in, const hit_record& rec, vec3& attenuation, ray& scattered) const  {
         vec3 outward_normal;
-        vec3 reflected = reflect(r_in.direction(), rec.normal);
-        double ni_over_nt = cauchyRefractionIndex(r_in.ray_wavelength()/10000.0, B_C[glass_type][0], B_C[glass_type][1]);
+        //r_in.B.make_unit_vector();
+        vec3 reflected = reflect(r_in.direction() / r_in.direction().length(), rec.normal);
+        double ni_over_nt = cauchyRefractionIndex(r_in.ray_wavelength()/1000.0, B_C[glass_type][0], B_C[glass_type][1]);
         //printf("%f\n",ni_over_nt);
         attenuation = vec3(1.0, 1.0, 1.0);
         vec3 refracted;
@@ -145,6 +146,7 @@ public:
         }
         return true;
     }
+
 
     float ref_idx;
     int glass_type;
