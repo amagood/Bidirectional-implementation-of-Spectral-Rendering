@@ -14,6 +14,7 @@
 #include "aabb.h"
 
 #include <float.h>
+#include <string>
 
 
 class material;
@@ -39,6 +40,12 @@ class hittable {
     public:
         virtual bool hit(const ray& r, float t_min, float t_max, hit_record& rec) const = 0;
         virtual bool bounding_box(float t0, float t1, aabb& box) const = 0;
+
+        [[maybe_unused]] virtual double shalloest() const { return 0;}
+        virtual std::string getShapeInfo() const
+        {
+            return "undefined";
+        }
 };
 
 class flip_normals : public hittable {

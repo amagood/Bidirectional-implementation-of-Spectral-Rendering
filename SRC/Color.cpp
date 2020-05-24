@@ -440,5 +440,9 @@ spectralTable::spectralTable()
 
 vec3 spectralTable::getRGB(int lambda)
 {
-    return data[lambda];
+    vec3 tmp = data[lambda];
+    float r,g,b;
+    XYZ2RGB(tmp.x(), tmp.y(), tmp.z(), &r, &g, &b);
+
+    return vec3(r,g,b);
 }

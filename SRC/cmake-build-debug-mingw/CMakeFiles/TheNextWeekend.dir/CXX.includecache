@@ -61,6 +61,8 @@ aabb.h
 C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/aabb.h
 float.h
 -
+string
+-
 
 C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/hittable_list.h
 hittable.h
@@ -108,6 +110,8 @@ thread
 ctime
 -
 cstdlib
+-
+GL/freeglut.h
 -
 
 C:/Users/DELEE/Desktop/Grapic Project/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/material.h

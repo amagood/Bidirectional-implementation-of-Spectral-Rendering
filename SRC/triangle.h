@@ -9,7 +9,7 @@
 #include "hittable.h"
 
 using namespace std;
-vec3 center(350.0,155.0,118.3);
+vec3 center(277.5,100.0,250.0);
 
 class Triangle : public hittable
 {
@@ -26,9 +26,19 @@ public:
     }
     bool hit(const ray& r, float tmin, float tmax, hit_record& rec) const final;
     bool bounding_box(float t0, float t1, aabb& box) const final;
+    [[nodiscard]] double shalloest() const final
+    {
+        double a = points[0].z(), b = points[1].z(), c = points[2].z();
+        return (a<b)? (a<c?a:c) : (b<c?b:c);
+    }
+
+    string getShapeInfo() const final;
 
 };
-
+string Triangle::getShapeInfo() const
+{
+    return "triangle";
+}
 bool Triangle::hit(const ray& r, float tmin, float tmax, hit_record& rec) const
 {
     vec3 edge1 = points[1] - points[0];
@@ -72,7 +82,6 @@ bool Triangle::hit(const ray& r, float tmin, float tmax, hit_record& rec) const
         return true;
     }
     return false;
-
 }
 float min3(float a,float b, float c)
 {
