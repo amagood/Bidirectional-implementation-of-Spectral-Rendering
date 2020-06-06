@@ -1,4 +1,4 @@
-"C:\Program Files\JetBrains\CLion 2020.1.1\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" "N:\clion projects\Bidirectional-implementation-of-Spectral-Rendering\Bidirectional-implementation-of-Spectral-Rendering-dev-amagood\SRC"
+"C:\Program Files\JetBrains\CLion 2019.1.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" D:\files\CGPROJECT\Bidirectional-implementation-of-Spectral-Rendering\SRC
 -- The C compiler identification is GNU 8.1.0
 -- The CXX compiler identification is GNU 8.1.0
 -- Check for working C compiler: C:/Program Files/mingw-w64/x86_64-8.1.0-posix-seh-rt_v6-rev0/mingw64/bin/gcc.exe
@@ -15,4 +15,4 @@
 -- Detecting CXX compile features - done
 -- Configuring done
 -- Generating done
--- Build files have been written to: N:/clion projects/Bidirectional-implementation-of-Spectral-Rendering/Bidirectional-implementation-of-Spectral-Rendering-dev-amagood/SRC/cmake-build-debug-mingw
+-- Build files have been written to: D:/files/CGPROJECT/Bidirectional-implementation-of-Spectral-Rendering/SRC/cmake-build-debug-mingw
