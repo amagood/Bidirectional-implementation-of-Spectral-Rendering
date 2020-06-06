@@ -115,7 +115,7 @@ public:
         vec3 outward_normal;
         //r_in.B.make_unit_vector();
         vec3 reflected = reflect(r_in.direction() / r_in.direction().length(), rec.normal);
-        double ni_over_nt = cauchyRefractionIndex(r_in.ray_wavelength()/1000.0, B_C[glass_type][0], B_C[glass_type][1]);
+        double ni_over_nt = cauchyRefractionIndex(r_in.ray_wavelength()/2000.0, B_C[glass_type][0], B_C[glass_type][1]);
         //printf("%f\n",ni_over_nt);
         attenuation = vec3(1.0, 1.0, 1.0);
         vec3 refracted;
@@ -138,7 +138,7 @@ public:
             scattered = ray(rec.p, reflected, r_in.ray_wavelength(), r_in.time());
             reflect_prob = 1.0;
         }
-        if (random_double() < reflect_prob) {
+        if (false) {
             scattered = ray(rec.p, reflected, r_in.ray_wavelength(), r_in.time());
         }
         else {

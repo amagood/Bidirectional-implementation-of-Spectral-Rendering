@@ -9,7 +9,7 @@
 #include "hittable.h"
 
 using namespace std;
-vec3 center(350.0,155.0,118.3);
+vec3 center(277.5,100.0,250.0);
 
 class Triangle : public hittable
 {
@@ -82,7 +82,6 @@ bool Triangle::hit(const ray& r, float tmin, float tmax, hit_record& rec) const
         return true;
     }
     return false;
-
 }
 float min3(float a,float b, float c)
 {
