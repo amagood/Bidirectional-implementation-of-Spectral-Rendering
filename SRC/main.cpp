@@ -29,6 +29,7 @@
 #include <iostream>
 #include <limits>
 #include "svpng.h"
+#include "benchmark.h"
 #include <omp.h>
 #include <thread>
 #include <ctime>
@@ -401,7 +402,7 @@ hittable *random_scene() {
 
 constexpr int nx = 800;
 constexpr int ny = 800;
-constexpr int ns = 1000;
+constexpr int ns = 2000;
 unsigned char rgb[nx*ny*3] = {}, *p = rgb;
 int nowi,nowj;
 
@@ -433,7 +434,7 @@ int run() {
     float vfov = 40.0;
 
     camera cam(lookfrom, lookat, vec3(0,1,0), vfov, float(nx)/float(ny), aperture, dist_to_focus, 0.0, 1.0);
-
+    Benchmark *benchmark = new Benchmark;
 #pragma omp declare reduction(vecPlus:vec3:omp_out += omp_in) initializer(omp_priv=vec3(0,0,0))
     for (int j = ny-1; j >= 0; j--) {
         for (int i = 0; i < nx; i++) {
@@ -469,7 +470,9 @@ int run() {
         }
         (j%10==0) && std::cerr << j/10 <<std::endl;
     }
+    delete benchmark;
     std::cerr<<"end OwO"<<std::endl;
+
 
     FILE * output = fopen("output.png", "wb");
 
